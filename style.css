@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #ffffff; /* Серый фон как на превью */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bat {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  transform: scale(6); /* Масштаб пикселей */
+  transform-origin: top left;
+  position: relative;
+  /* Сдвигаем центр, так как рисунок строится вправо и вниз от 1px точки */
+  left: -96px;
+  top: -72px;
+  animation: bat-fly 0.45s steps(1) infinite;
+  will-change: box-shadow;
+}
+
+/* Планшеты и небольшие экраны */
+@media (max-width: 900px) {
+  .bat {
+    transform: scale(4.5);
+    left: -72px;
+    top: -54px;
+  }
+}
+
+/* Смартфоны */
+@media (max-width: 520px) {
+  .bat {
+    transform: scale(3);
+    left: -48px;
+    top: -36px;
+  }
+}
+
+@keyframes bat-fly {
+  /* КАДР 1: Крылья подняты вверх (как на скриншоте) */
+  0%, 100% {
+    box-shadow: 
+      /* Левое крыло (верх) */
+      6px 2px #ffa8a8, 7px 2px #ffa8a8,
+      5px 3px #ffa8a8, 6px 3px #ffa8a8, 7px 3px #ffa8a8,
+      4px 4px #ffa8a8, 5px 4px #ffa8a8, 6px 4px #ffa8a8, 7px 4px #ffa8a8, 8px 4px #ffa8a8,
+      4px 5px #ffa8a8, 5px 5px #ffa8a8, 6px 5px #ffa8a8, 7px 5px #ffa8a8, 8px 5px #ffa8a8, 9px 5px #ffa8a8,
+      4px 6px #ffa8a8, 5px 6px #ffa8a8, 6px 6px #ffa8a8, 7px 6px #ffa8a8, 8px 6px #ffa8a8, 9px 6px #ffa8a8, 10px 6px #ffa8a8,
+      5px 7px #ffa8a8, 6px 7px #ffa8a8, 7px 7px #ffa8a8, 8px 7px #ffa8a8, 9px 7px #ffa8a8, 10px 7px #ffa8a8,
+      
+      /* Правое крыло (верх) */
+      23px 2px #ffa8a8, 24px 2px #ffa8a8,
+      23px 3px #ffa8a8, 24px 3px #ffa8a8, 25px 3px #ffa8a8,
+      22px 4px #ffa8a8, 23px 4px #ffa8a8, 24px 4px #ffa8a8, 25px 4px #ffa8a8, 26px 4px #ffa8a8,
+      21px 5px #ffa8a8, 22px 5px #ffa8a8, 23px 5px #ffa8a8, 24px 5px #ffa8a8, 25px 5px #ffa8a8, 26px 5px #ffa8a8,
+      20px 6px #ffa8a8, 21px 6px #ffa8a8, 22px 6px #ffa8a8, 23px 6px #ffa8a8, 24px 6px #ffa8a8, 25px 6px #ffa8a8, 26px 6px #ffa8a8,
+      20px 7px #ffa8a8, 21px 7px #ffa8a8, 22px 7px #ffa8a8, 23px 7px #ffa8a8, 24px 7px #ffa8a8, 25px 7px #ffa8a8,
+
+      /* Голова, ушки и тело */
+      12px 7px #ffa8a8, 18px 7px #ffa8a8,
+      6px 8px #ffa8a8, 7px 8px #ffa8a8, 8px 8px #ffa8a8, 9px 8px #ffa8a8, 10px 8px #ffa8a8, 11px 8px #ffa8a8, 12px 8px #ffa8a8, 13px 8px #ffa8a8, 17px 8px #ffa8a8, 18px 8px #ffa8a8, 19px 8px #ffa8a8, 20px 8px #ffa8a8, 21px 8px #ffa8a8, 22px 8px #ffa8a8, 23px 8px #ffa8a8, 24px 8px #ffa8a8,
+      7px 9px #ffa8a8, 8px 9px #ffa8a8, 9px 9px #ffa8a8, 10px 9px #ffa8a8, 11px 9px #ffa8a8, 12px 9px #ffa8a8, 13px 9px #ffa8a8, 14px 9px #ffa8a8, 15px 9px #ffa8a8, 16px 9px #ffa8a8, 17px 9px #ffa8a8, 18px 9px #ffa8a8, 19px 9px #ffa8a8, 20px 9px #ffa8a8, 21px 9px #ffa8a8, 22px 9px #ffa8a8, 23px 9px #ffa8a8,
+      8px 10px #ffa8a8, 9px 10px #ffa8a8, 10px 10px #ffa8a8, 11px 10px #ffa8a8, 12px 10px #ffa8a8, 13px 10px #ffa8a8, 14px 10px #ffa8a8, 15px 10px #ffa8a8, 16px 10px #ffa8a8, 17px 10px #ffa8a8, 18px 10px #ffa8a8, 19px 10px #ffa8a8, 20px 10px #ffa8a8, 21px 10px #ffa8a8, 22px 10px #ffa8a8,
+      
+      /* Ряд с белыми глазами */
+      9px 11px #ffa8a8, 10px 11px #ffa8a8, 11px 11px #ffa8a8, 12px 11px #ffffff, 13px 11px #ffa8a8, 14px 11px #ffa8a8, 15px 11px #ffa8a8, 16px 11px #ffffff, 17px 11px #ffa8a8, 18px 11px #ffa8a8, 19px 11px #ffa8a8, 20px 11px #ffa8a8, 21px 11px #ffa8a8,
+      10px 12px #ffa8a8, 11px 12px #ffa8a8, 12px 12px #ffffff, 13px 12px #ffa8a8, 14px 12px #ffa8a8, 15px 12px #ffa8a8, 16px 12px #ffffff, 17px 12px #ffa8a8, 18px 12px #ffa8a8, 19px 12px #ffa8a8, 20px 12px #ffa8a8,
+      
+      /* Низ тельца и лапки */
+      11px 13px #ffa8a8, 12px 13px #ffa8a8, 13px 13px #ffa8a8, 14px 13px #ffa8a8, 15px 13px #ffa8a8, 16px 13px #ffa8a8, 17px 13px #ffa8a8, 18px 13px #ffa8a8, 19px 13px #ffa8a8,
+      12px 14px #ffa8a8, 13px 14px #ffa8a8, 14px 14px #ffa8a8, 15px 14px #ffa8a8, 16px 14px #ffa8a8, 17px 14px #ffa8a8, 18px 14px #ffa8a8,
+      13px 15px #ffa8a8, 14px 15px #ffa8a8, 16px 15px #ffa8a8, 17px 15px #ffa8a8,
+
+      /* Частицы дыма/тени вокруг */
+      2px 7px #732727, 1px 9px #732727, 3px 11px #732727,
+      28px 6px #732727, 29px 8px #732727, 27px 10px #732727;
+  }
+
+  /* КАДР 2: Крылья расправлены в стороны */
+  33.3% {
+    box-shadow: 
+      /* Голова и ушки (чуть приподнялись) */
+      12px 6px #ffa8a8, 18px 6px #ffa8a8,
+      11px 7px #ffa8a8, 12px 7px #ffa8a8, 13px 7px #ffa8a8, 17px 7px #ffa8a8, 18px 7px #ffa8a8, 19px 7px #ffa8a8,
+      
+      /* Расправленные крылья + тело */
+      2px 8px #ffa8a8, 3px 8px #ffa8a8, 4px 8px #ffa8a8, 5px 8px #ffa8a8, 6px 8px #ffa8a8, 7px 8px #ffa8a8, 8px 8px #ffa8a8, 9px 8px #ffa8a8, 10px 8px #ffa8a8, 11px 8px #ffa8a8, 12px 8px #ffa8a8, 13px 8px #ffa8a8, 14px 8px #ffa8a8, 15px 8px #ffa8a8, 16px 8px #ffa8a8, 17px 8px #ffa8a8, 18px 8px #ffa8a8, 19px 8px #ffa8a8, 20px 8px #ffa8a8, 21px 8px #ffa8a8, 22px 8px #ffa8a8, 23px 8px #ffa8a8, 24px 8px #ffa8a8, 25px 8px #ffa8a8, 26px 8px #ffa8a8, 27px 8px #ffa8a8, 28px 8px #ffa8a8,
+      1px 9px #ffa8a8, 2px 9px #ffa8a8, 3px 9px #ffa8a8, 4px 9px #ffa8a8, 5px 9px #ffa8a8, 6px 9px #ffa8a8, 7px 9px #ffa8a8, 8px 9px #ffa8a8, 9px 9px #ffa8a8, 10px 9px #ffa8a8, 11px 9px #ffa8a8, 12px 9px #ffa8a8, 13px 9px #ffa8a8, 14px 9px #ffa8a8, 15px 9px #ffa8a8, 16px 9px #ffa8a8, 17px 9px #ffa8a8, 18px 9px #ffa8a8, 19px 9px #ffa8a8, 20px 9px #ffa8a8, 21px 9px #ffa8a8, 22px 9px #ffa8a8, 23px 9px #ffa8a8, 24px 9px #ffa8a8, 25px 9px #ffa8a8, 26px 9px #ffa8a8, 27px 9px #ffa8a8, 28px 9px #ffa8a8, 29px 9px #ffa8a8,
+      2px 10px #ffa8a8, 3px 10px #ffa8a8, 4px 10px #ffa8a8, 5px 10px #ffa8a8, 6px 10px #ffa8a8, 7px 10px #ffa8a8, 8px 10px #ffa8a8, 9px 10px #ffa8a8, 10px 10px #ffa8a8, 11px 10px #ffa8a8, 12px 10px #ffffff, 13px 10px #ffa8a8, 14px 10px #ffa8a8, 15px 10px #ffa8a8, 16px 10px #ffffff, 17px 10px #ffa8a8, 18px 10px #ffa8a8, 19px 10px #ffa8a8, 20px 10px #ffa8a8, 21px 10px #ffa8a8, 22px 10px #ffa8a8, 23px 10px #ffa8a8, 24px 10px #ffa8a8, 25px 10px #ffa8a8, 26px 10px #ffa8a8, 27px 10px #ffa8a8, 28px 10px #ffa8a8,
+      4px 11px #ffa8a8, 5px 11px #ffa8a8, 7px 11px #ffa8a8, 8px 11px #ffa8a8, 10px 11px #ffa8a8, 11px 11px #ffa8a8, 12px 11px #ffffff, 13px 11px #ffa8a8, 14px 11px #ffa8a8, 15px 11px #ffa8a8, 16px 11px #ffffff, 17px 11px #ffa8a8, 18px 11px #ffa8a8, 19px 11px #ffa8a8, 20px 11px #ffa8a8, 22px 11px #ffa8a8, 23px 11px #ffa8a8, 25px 11px #ffa8a8, 26px 11px #ffa8a8,
+
+      /* Низ тельца */
+      11px 12px #ffa8a8, 12px 12px #ffa8a8, 13px 12px #ffa8a8, 14px 12px #ffa8a8, 15px 12px #ffa8a8, 16px 12px #ffa8a8, 17px 12px #ffa8a8, 18px 12px #ffa8a8, 19px 12px #ffa8a8,
+      12px 13px #ffa8a8, 13px 13px #ffa8a8, 14px 13px #ffa8a8, 15px 13px #ffa8a8, 16px 13px #ffa8a8, 17px 13px #ffa8a8, 18px 13px #ffa8a8,
+      13px 14px #ffa8a8, 14px 14px #ffa8a8, 16px 14px #ffa8a8, 17px 14px #ffa8a8,
+
+      /* Частицы дыма */
+      3px 5px #732727, 1px 7px #732727, 27px 5px #732727, 29px 7px #732727;
+  }
+
+  /* КАДР 3: Крылья опущены вниз (взмах) */
+  66.6% {
+    box-shadow: 
+      /* Голова и тело */
+      12px 7px #ffa8a8, 18px 7px #ffa8a8,
+      11px 8px #ffa8a8, 12px 8px #ffa8a8, 13px 8px #ffa8a8, 14px 8px #ffa8a8, 15px 8px #ffa8a8, 16px 8px #ffa8a8, 17px 8px #ffa8a8, 18px 8px #ffa8a8, 19px 8px #ffa8a8,
+      10px 9px #ffa8a8, 11px 9px #ffa8a8, 12px 9px #ffa8a8, 13px 9px #ffa8a8, 14px 9px #ffa8a8, 15px 9px #ffa8a8, 16px 9px #ffa8a8, 17px 9px #ffa8a8, 18px 9px #ffa8a8, 19px 9px #ffa8a8, 20px 9px #ffa8a8,
+      
+      /* Крылья уходят вниз по бокам */
+      7px 10px #ffa8a8, 8px 10px #ffa8a8, 9px 10px #ffa8a8, 10px 10px #ffa8a8, 11px 10px #ffa8a8, 12px 10px #ffa8a8, 13px 10px #ffa8a8, 14px 10px #ffa8a8, 15px 10px #ffa8a8, 16px 10px #ffa8a8, 17px 10px #ffa8a8, 18px 10px #ffa8a8, 19px 10px #ffa8a8, 20px 10px #ffa8a8, 21px 10px #ffa8a8, 22px 10px #ffa8a8, 23px 10px #ffa8a8,
+      5px 11px #ffa8a8, 6px 11px #ffa8a8, 7px 11px #ffa8a8, 8px 11px #ffa8a8, 9px 11px #ffa8a8, 10px 11px #ffa8a8, 11px 11px #ffa8a8, 12px 11px #ffffff, 13px 11px #ffa8a8, 14px 11px #ffa8a8, 15px 11px #ffa8a8, 16px 11px #ffffff, 17px 11px #ffa8a8, 18px 11px #ffa8a8, 19px 11px #ffa8a8, 20px 11px #ffa8a8, 21px 11px #ffa8a8, 22px 11px #ffa8a8, 23px 11px #ffa8a8, 24px 11px #ffa8a8, 25px 11px #ffa8a8,
+      4px 12px #ffa8a8, 5px 12px #ffa8a8, 6px 12px #ffa8a8, 7px 12px #ffa8a8, 8px 12px #ffa8a8, 9px 12px #ffa8a8, 10px 12px #ffa8a8, 11px 12px #ffa8a8, 12px 12px #ffffff, 13px 12px #ffa8a8, 14px 12px #ffa8a8, 15px 12px #ffa8a8, 16px 12px #ffffff, 17px 12px #ffa8a8, 18px 12px #ffa8a8, 19px 12px #ffa8a8, 20px 12px #ffa8a8, 21px 12px #ffa8a8, 22px 12px #ffa8a8, 23px 12px #ffa8a8, 24px 12px #ffa8a8, 25px 12px #ffa8a8, 26px 12px #ffa8a8,
+      4px 13px #ffa8a8, 5px 13px #ffa8a8, 6px 13px #ffa8a8, 7px 13px #ffa8a8, 8px 13px #ffa8a8, 11px 13px #ffa8a8, 12px 13px #ffa8a8, 13px 13px #ffa8a8, 14px 13px #ffa8a8, 15px 13px #ffa8a8, 16px 13px #ffa8a8, 17px 13px #ffa8a8, 18px 13px #ffa8a8, 19px 13px #ffa8a8, 22px 13px #ffa8a8, 23px 13px #ffa8a8, 24px 13px #ffa8a8, 25px 13px #ffa8a8, 26px 13px #ffa8a8,
+      5px 14px #ffa8a8, 6px 14px #ffa8a8, 7px 14px #ffa8a8, 12px 14px #ffa8a8, 13px 14px #ffa8a8, 14px 14px #ffa8a8, 15px 14px #ffa8a8, 16px 14px #ffa8a8, 17px 14px #ffa8a8, 18px 14px #ffa8a8, 23px 14px #ffa8a8, 24px 14px #ffa8a8, 25px 14px #ffa8a8,
+      6px 15px #ffa8a8, 13px 15px #ffa8a8, 14px 15px #ffa8a8, 16px 15px #ffa8a8, 17px 15px #ffa8a8, 24px 15px #ffa8a8,
+
+      /* Частицы дыма */
+      2px 9px #732727, 3px 14px #732727, 28px 9px #732727, 27px 14px #732727;
+  }
+}
