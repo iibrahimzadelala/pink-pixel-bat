@@ -19,7 +19,7 @@ body {
   /* Сдвигаем центр, так как рисунок строится вправо и вниз от 1px точки */
   left: -96px;
   top: -72px;
-  animation: bat-fly 1.5s steps(1) infinite;
+  animation: bat-fly 0.45s steps(1) infinite;
   will-change: box-shadow;
 }
 
